@@ -22,11 +22,7 @@ exports.findAllRes = catchAsync(async (req, res, next) => {
     where: {
       status: true,
     },
-    include: [
-        {
-          model: User,
-        },
-      ],
+    
   });
 
   res.status(200).json({
@@ -56,7 +52,7 @@ exports.updateRestaurant = catchAsync(async (req, res) => {
     message: 'update restaurant exit',
     restaurants,
   });
-});
+}); 
 
 exports.deleteRestaurant = catchAsync(async (req, res) => {
     const { restaurants } = req;

@@ -34,3 +34,11 @@ exports.createMealsValidation = [
   body('name').notEmpty().withMessage('name cannot be empty'),
   valiFields,
 ];
+
+
+exports.createRestaurantValidation = [
+  body('name').notEmpty().withMessage('name cannot be empty'),
+  body('address').notEmpty().withMessage('address cannot be empty'),
+  valiFields,
+];
+
