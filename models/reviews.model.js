@@ -12,8 +12,8 @@ const Reviews = db.define('reviews', {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      Comment: {
-        type: DataTypes.TEXT,
+      comment: {
+        type: DataTypes.STRING,
         allowNull: false,
       },
       restaurantId: {

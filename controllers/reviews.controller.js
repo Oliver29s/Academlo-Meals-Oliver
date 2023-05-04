@@ -4,15 +4,15 @@ const Reviews = require('../models/reviews.model');
 exports.createReviews = catchAsync(async (req, res, next) => {
   const { comment } = req.body;
 
-  const { id } = req.params;
+   const { id } = req.params;
 
   const uid = req.sessionUser.id;
 
-  const reviews = await Reviews.create({
+   await Reviews.create({
     userId: uid,
     comment,
     rating: Math.ceil(Math.random() * 5),
-    restaurantId: id,
+    restaurantId: +id,
   });
 
   res.status(201).json({
